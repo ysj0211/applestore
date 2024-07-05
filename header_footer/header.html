@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애플 스토어 header, footer영역</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <style>
+    * {padding: 0; margin: 0;}
+    li {list-style: none;}
+    a {text-decoration: none; color: inherit;}
+
+    body {font-size: 15px; color: #333;}
+    
+
+    /* header1 */
+    .bold{font-weight: bold; font-size: 26px;}
+    .bold2{font-weight: bold;}
+    #header {width: 1750px; height: 200px; margin: 0 auto;}
+    #win {width: 420px; height: 175px; float: left; padding: 0 20px 25px 20px; }
+    #win>ul {position: relative; width: 440px; height: 35px; margin-top: 100px; padding: 40px 0 0 17px; display: flex;}
+    #win>ul>li {margin-right: 30px; height: 35px; line-height: 35px; border: none; border-radius: 15px;}
+    #win>ul>li:last-child { margin: 0; }
+    #win>ul>li:hover {background: #33333300; color: #6e6e6ef0;}
+    #win>ul>li>a {padding: 0 15px; font-weight: bold; display: inline-block;}
+
+    #kite {width: 800px; height: 200px; float: left;}
+    #kite a {display: block; width: 100px; margin: 0 auto; padding-top: 40px;}
+
+    #this {width: 450px; height: 164px; float: left; position: relative; padding: 18px 20px;}
+    #this>.menu {padding-top: 105px;}
+    #this>.menu>.SUB {position: absolute;}
+    #this>.menu>.SUB>input {height: 36px; width: 247px; padding: 0 43px 0 10px; background-color: #fffafa00; border-radius: 15px; border: none; box-shadow: 4px 4px 3px rgba(0, 0, 0, 0); cursor: pointer; outline: 1px solid rgba(0, 0, 0, 0.238);}
+    .SUB >input:focus{border: none; outline: none;}
+    /* .SUB >input:hover{ box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.402);} */
+    #this>.menu>.SUB>a {position: relative; top: 8px; left: -40px;}
+    #this>ul>.SUB2 {float: left; padding: 10px 30px 0 330px;} 
+    #this>ul>.SUB3 {padding-top: 10px;}
+
+    /* header2 */
+    #header2 {height: 400px; /* background: #FFFAFA; */ /* outline: 1px dotted red; */}
+    #header2 #inner {width: 1750px; height: 400px; margin: 0 auto; /* outline: 1px dotted red; */}
+    #header2 #inner h1 {height: 160px; text-align: center; font-size: 50px; padding: 40px 30px 0 0; /* outline: 1px dotted red; */}
+    #header2 #inner h1 span {color: #666666;}
+    #header2 .images {height: 200px;}
+    #header2 .images ul {padding-left: 300px;}
+    #header2 .images ul .SUBli img {padding-left: 16px;}
+    #header2 .images ul::after {content: ''; display: block; clear: both;}
+    #header2 .images ul li {float: left; padding-top: 70px;}
+    #header2 .images ul li:hover a p {text-decoration: underline; color: #000000;}
+    #header2 .images ul li img:hover{scale: 1.1; }
+    #header2 .images ul li a {display: block; padding-right: 70px;}
+    #header2 .images ul li a p {margin-top: 10px; text-align: center; font-weight: bold; color: rgb(101, 101, 101);}
+    #header2 .images ul li a p:hover {}
+
+    .bold{font-weight: bold; font-size: 26px;}
+    .bold2{font-weight: bold;}
+    /* .submenu{position: absolute; left: 30px; top: 75px; width: 100%; padding-bottom: 90px; background-color: #fff; height: 250px; z-index: 2;} */
+    /* .submenu2{position: absolute; left: 330px; top: 75px; width: 100%; z-index: 2;}
+    .submenu3{position: absolute; left: 500px; top: 75px; width: 100%; z-index: 2;} */
+    .submenu2 >li{line-height: 25px;}
+    .submenu3 >li{line-height: 25px;}
+    /* .blank{height: 340px; position: absolute; top: 75px; width: 1700px; left: -5000px; background-color: #fff;z-index: 1;left: 0;} */
+    .subWrap{width: 1600px; display: flex; padding: 50px 50px; background-color: #fff;}
+    .logo{position: relative;}
+
+    /* .test{outline:2px solid red;} */
+
+    </style> 
+  <script>
+    $(function(){
+      // $(".logo > li").hover(function(){
+      //   $(".subWrap").css("display","block");
+      // }, function(){
+      //   $(".subWrap").css("display","none");
+      // })
+
+
+      $(".subWrap").css("display",'none');
+      $(".logo > li").mouseenter(function(){
+        $(".subWrap").stop().slideDown('fast');
+      })
+      
+      $(".logo > li").mouseleave(function(){
+        $(".subWrap").stop().slideUp('fast');
+      })
+      
+      
+
+    })
+  </script>
+</head>
+<body>
+
+  <div id="header2">
+    <div id="inner">
+      <h1>스토어.<span>좋아하는 Apple 제품을<br>구입하는 가장 좋은 방법.</span></h1>
+      <div class="images">
+        <ul>
+          <li><a href="#"><img src="./images/User_05.png" alt=""></a>
+              <a href="#"><p>Mac</p></a>
+          </li>
+          <li><a href="#"><img src="./images/User_06.png" alt=""></a>
+              <a href="#"><p>iPhone</p></a>
+          </li>
+          <li><a href="#"><img src="./images/User_07.png" alt=""></a>
+              <a href="#"><p>iPad</p></a>
+          </li>
+          <li><a href="#"><img src="./images/User_08.png" alt=""></a>
+              <a href="#"><p>Apple Watch</p></a>
+          </li>
+          <li><a href="#"><img src="./images/User_09.png" alt=""></a>
+              <a href="#"><p>AirPods</p></a>    
+          </li>
+          <li><a href="#"><img src="./images/User_10.png" alt=""></a>
+              <a href="#"><p>AirTag</p></a>
+          </li>
+          <li class="SUBli">
+            <a href="#"><img src="./images/User_11.png" alt=""></a>
+              <a href="#"><p>Apple TV 4K</p></a>
+          </li>
+          <li><a href="#"><img src="./images/User_12.png" alt=""></a>
+              <a href="#"><p>액세사리</p></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="wrap">
+
+</body>
+</html>

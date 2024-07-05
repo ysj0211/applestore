@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애플 스토어 header, footer영역</title>
+  <style>
+    * {padding: 0; margin: 0;}
+    li {list-style: none;}
+    a {text-decoration: none; color: inherit;}
+
+    body {font-size: 15px; color: #333;}
+    
+    /* footer 영역 */
+    #wrap {background-color: #fffafa00; outline: 1px solid red; height: 1000px;}
+    #wrap .inner {width: 1750px; margin: 0 auto;}
+    #wrap .inner>.logo2 {height: 26px; padding: 30px 0 34px 50px;}
+    #wrap .inner>.logo2:last-child {padding: 0;}
+    #wrap .inner>.logo2>ul>li {float: left;}
+    #wrap .inner>.logo2>ul>.applelogo1 {margin-top: 4px;}
+    #wrap .inner>.logo2>ul>.applelogo2 {color: #ccc; font-size: 20px;}
+    #wrap .inner>.logo2>ul>.applelogo3 {margin-top: 4px;}
+    #wrap .inner>.logo2>ul>li>a {padding-right: 22px;} 
+
+    #wrap .inner .Paragraph {padding: 0 50px;}
+    #wrap .inner .Paragraph::after {content: ''; display: block; clear: both;}
+    #wrap .inner .Paragraph .bigbox1 {width: 20%; float: left;}
+    #wrap .inner .Paragraph .bigbox1 .smallbox11 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox1 .smallbox11>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox1 .smallbox11>ul>li:last-child {padding: 0; margin-bottom: 40px;}
+    #wrap .inner .Paragraph .bigbox1 .smallbox12 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox1 .smallbox12>ul>li {padding-bottom: 24px;}
+
+    #wrap .inner .Paragraph .bigbox2 {width: 20%; float: left;}
+    #wrap .inner .Paragraph .bigbox2 .smallbox21 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox2 .smallbox21>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox2 .smallbox21>ul>li:last-child {padding: 0; margin-bottom: 40px;}
+    #wrap .inner .Paragraph .bigbox2 .smallbox22 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox2 .smallbox22>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox2 .smallbox22>ul>li:last-child {padding-bottom: 170px;}
+
+    #wrap .inner .Paragraph .bigbox3 {width: 20%; float: left;}
+    #wrap .inner .Paragraph .bigbox3>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox3>ul>li:last-child {padding: 0; margin-bottom: 250px;}
+
+    #wrap .inner .Paragraph .bigbox4 {width: 20%; float: left;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox41 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox41>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox41>ul>li:last-child {padding-bottom: 0; margin-bottom: 40px;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox42 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox42>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox42>ul>li:last-child {padding-bottom: 0; margin-bottom: 40px;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox43 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox43>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox43>ul>li:last-child {padding-bottom: 0; margin-bottom: 40px;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox44 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox44>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox4 .smallbox44>ul>li:last-child {padding-bottom: 170px;}
+
+    #wrap .inner .Paragraph .bigbox5 {width: 20%; float: left;}
+    #wrap .inner .Paragraph .bigbox5 .smallbox51 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox5 .smallbox51>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox5 .smallbox51>ul>li:last-child {padding-bottom: 0; margin-bottom: 40px;}
+    #wrap .inner .Paragraph .bigbox5 .smallbox52 {width: 100%;}
+    #wrap .inner .Paragraph .bigbox5 .smallbox52>ul>li {padding-bottom: 20px;}
+    #wrap .inner .Paragraph .bigbox5 .smallbox52>ul>li:last-child {padding-bottom: 90px;}
+
+    #wrap .inner .mainaragraph {width: 1650px; margin: 0 50px;}
+    #wrap .inner .mainaragraph .SUBParagraph {width: 100%; border-bottom: 2px solid #ccc;}
+    #wrap .inner .mainaragraph .SUBParagraph p {padding: 10px 0;}
+    #wrap .inner .mainaragraph .SUBParagraph p a {color: blue;}
+
+    #wrap .inner .mainaragraph .lowerfooter {width: 100%; margin-top: 10px;}
+    #wrap .inner .mainaragraph .lowerfooter::after {content: ''; display: block; clear: both;}
+    #wrap .inner .mainaragraph .lowerfooter .lowerfooter1 {width: 400px; float: left; margin-right: 70px;}
+    #wrap .inner .mainaragraph .lowerfooter .lowerfooter2 {float: left;}
+    #wrap .inner .mainaragraph .lowerfooter .lowerfooter2>ul>li {float: left; padding-right: 10px; border-right: 2px solid #ccc;}
+    #wrap .inner .mainaragraph .lowerfooter .lowerfooter2>ul>li:nth-child(2) {padding-left: 10px;}
+    #wrap .inner .mainaragraph .lowerfooter .lowerfooter2>ul>li:nth-child(3) {padding-left: 10px;}
+    #wrap .inner .mainaragraph .lowerfooter .lowerfooter2>ul>li:nth-child(4) {padding-left: 10px;}
+    #wrap .inner .mainaragraph .lowerfooter .lowerfooter2>ul>li:nth-child(5) {padding-left: 10px;}
+    #wrap .inner .mainaragraph .lowerfooter .lowerfooter2>ul>li:last-child {border: none;}
+
+    #wrap .inner .mainaragraph .lowerfooter .lowerfooter3 {float: right;}
+    
+    #wrap .inner div div ul li a:hover {text-decoration: underline; color: #333;}
+    #wrap .inner div div div ul li a:hover {text-decoration: underline; color: #333;}
+  </style> 
+</head>
+<body>
+ <!--  <div id="header"> -->
+   
+  <div id="wrap">
+    <div class="inner">
+      <div class="logo2">
+        <ul>
+          <li class="applelogo1"><a href="#">
+              <img src="./images/user_13.png" alt="">
+              </a>
+          </li>
+          <li class="applelogo2"><a href="#">&rang;</a></li>
+          <li class="applelogo3"><a href="#">애플 스토어 온라인</a></li>
+        </ul>
+      </div>
+      <div class="Paragraph">
+        <div class="bigbox1">
+          <div class="smallbox11">
+            <ul>
+              <li><strong>쇼핑하고 배우세요</strong></li>
+              <li><a href="#">가게</a></li>
+              <li><a href="#">맥</a></li>
+              <li><a href="#">아이패드</a></li>
+              <li><a href="#">아이폰</a></li>
+              <li><a href="#">보다</a></li>
+              <li><a href="#">비전</a></li>
+              <li><a href="#">에어팟</a></li>
+              <li><a href="#">TV 및 홈</a></li>
+              <li><a href="#">에어태그</a></li>
+              <li><a href="#">부속품</a></li>
+              <li><a href="#">기프트카드</a></li>
+            </ul>
+          </div>
+          <div class="smallbox12">
+            <ul>
+              <li><strong>애플 지갑</strong></li>
+              <li><a href="#">지갑</a></li>
+              <li><a href="#">애플가드</a></li>
+              <li><a href="#">애플 페이</a></li>
+              <li><a href="#">애플 캐시</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bigbox2">
+          <div class="smallbox21">
+            <ul>
+              <li><strong>계정</strong></li>
+              <li><a href="#">Apple ID 관리</a></li>
+              <li><a href="#">애플 스토어 계정</a></li>
+              <li><a href="#">iCIoud.com</a></li>
+            </ul>
+          </div>
+          <div class="smallbox22">
+            <ul>
+              <li><strong>오락</strong></li>
+              <li><a href="#">애플 원</a></li>
+              <li><a href="#">애플 TV+</a></li>
+              <li><a href="#">애플 뮤직</a></li>
+              <li><a href="#">애플 아케이드</a></li>
+              <li><a href="#">애플 파트니스+</a></li>
+              <li><a href="#">애플 뉴스+</a></li>
+              <li><a href="#">애플 팟캐스트</a></li>
+              <li><a href="#">애플북스</a></li>
+              <li><a href="#">앱 스토어</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bigbox3">
+          <ul>
+            <li><strong>애플 스토어</strong></li>
+            <li><a href="#">매장 찾기</a></li>
+            <li><a href="#">지니어스 바</a></li>
+            <li><a href="#">오늘은 애플에서</a></li>
+            <li><a href="#">애플캠프</a></li>
+            <li><a href="#">애플 스토어 앱</a></li>
+            <li><a href="#">인증된 리퍼브 제품</a></li>
+            <li><a href="#">애플 트레이드인</a></li>
+            <li><a href="#">자금조달</a></li>
+            <li><a href="#">Apple의 이동통신사 할인</a></li>
+            <li><a href="#">주문 상태</a></li>
+            <li><a href="#">쇼핑 도움말</a></li>
+          </ul>
+        </div>
+        <div class="bigbox4">
+          <div class="smallbox41">
+            <ul>
+              <li><strong>비즈니스를위한</strong></li>
+              <li><a href="#">애플과 비즈니스</a></li>
+              <li><a href="#">비즈니스를 위한 쇼핑</a></li>
+            </ul>
+          </div>
+          <div class="smallbox42">
+            <ul>
+              <li><strong>교육용</strong></li>
+              <li><a href="#">애플과 교육</a></li>
+              <li><a href="#">K-12를 위한 쇼핑</a></li>
+              <li><a href="#">대학 쇼핑</a></li>
+            </ul>
+          </div>
+          <div class="smallbox43">
+            <ul>
+              <li><strong>의료용</strong></li>
+              <li><a href="#">건강 관리 분야의 Apple</a></li>
+              <li><a href="#">Apple Watch의 건강</a></li>
+              <li><a href="#">iPhone의 건강 기록</a></li>
+            </ul>
+          </div>
+          <div class="smallbox44">
+            <ul>
+              <li><strong>정부용</strong></li>
+              <li><a href="#">정부를 위한 쇼핑</a></li>
+              <li><a href="#">재향군인 및 군인을 위한 쇼핑</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bigbox5">
+          <div class="smallbox51">
+            <ul>
+              <li><strong>사과의 가치</strong></li>
+              <li><a href="#">접근성</a></li>
+              <li><a href="#">교육</a></li>
+              <li><a href="#">환경</a></li>
+              <li><a href="#">포용성과 다양성</a></li>
+              <li><a href="#">은둔</a></li>
+              <li><a href="#">인종 평등과 정의</a></li>
+              <li><a href="#">공급업체의 책임</a></li>
+            </ul>
+          </div>
+          <div class="smallbox52">
+            <ul>
+              <li><strong>애플에 대하여</strong></li>
+              <li><a href="#">뉴스 편집실</a></li>
+              <li><a href="#">애플 리더쉽</a></li>
+              <li><a href="#">취업 기회</a></li>
+              <li><a href="#">투자자</a></li>
+              <li><a href="#">윤리 및 규정 준수</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">Apple에 문의하기</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <div class="mainaragraph">
+      <div class="SUBParagraph">
+        <p>다양한 쇼핑 방법: <a href="#"><ins>Apple Store찾기</ins></a> 또는 <a href="#"><ins>다른 소매점</ins></a>가까운. 또는 1-800-MY-APPLE 에 전화하세요.</p>
+      </div>
+      <div class="lowerfooter">
+        <div class="lowerfooter1">
+          <p>저작권 &copy; 2024 Web Project Team 1. 모든 권리 보유.</p>
+        </div>
+        <div class="lowerfooter2">
+          <ul>
+            <li><a href="#">개인 정보 정책</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">판매 및 환불</a></li>
+            <li><a href="#">합법적인</a></li>
+            <li><a href="#">사이트 맵</a></li>
+          </ul>
+        </div>
+        <div class="lowerfooter3">
+          <p>South Korea</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

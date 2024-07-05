@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="http://">
+    <meta name="description" content="this is site...">
+    <style>
+      /* .test{outline: 1px dotted red;} */
+      li {list-style: none;}
+      
+      #wrap { width: 2600px; height: 750px; margin: 0 auto; position: relative;}
+      #wrap .slide {
+        transition: 0.4s;
+        /* overflow: hidden; */
+        margin: 0 auto;
+        height: 750px;
+      width: 2600px;
+      background:url(./slideimage/mainimg\(2\).png) no-repeat;
+      position: relative; 
+      background-size:contain;
+      left: -410px;
+    }
+    #wrap .slide:hover{ scale: 1.02; transition: 0.4s;}
+    #wrap .slide:hover p{ scale: 1.1; transition: 0.5s; opacity: 1; text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.378);}
+      #wrap .slide p {font-size: 80px; color: #fff; text-align: center; position: absolute; top: 260px; left: 900px; opacity: 0; transition: 0.5s;}
+
+      #wrap .box {background-color: #f3f3f5; position: absolute; left:130px;bottom: 220px;}
+      #wrap .box ul {width: 1400px; display: flex; justify-content: space-between; position: absolute; }
+      #wrap .box ul li img {transition: 0.2s; border-radius: 10%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.452);}
+      #wrap .box ul li img:hover {box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.66); scale: 1.05;}
+      #wrap .box ul li {}
+      #wrap .box .box1 {z-index: 1;}
+      #wrap .box .box2 {z-index: 2;}
+      #wrap .box .box3 {z-index: 3;}
+      #wrap .box .box4 {z-index: 4;}
+      
+
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="slide">
+        <p>iPhone 14 Pro로 찍다</p>
+      </div>
+      <div class="box">
+        <ul class="test">
+          <li class="box1"><a href="#"><img src="./slideimage/div1.PNG" width="305px" height="385px"></a></li>
+          <li class="box2"><a href="#"><img src="./slideimage/div2.PNG" width="305px" height="385px"></a></li>
+          <li class="box3"><a href="#"><img src="./slideimage/div3.PNG" width="305px" height="385px"></a></li>
+          <li class="box4"><a href="#"><img src="./slideimage/div4.PNG" width="305px" height="385px"></a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
